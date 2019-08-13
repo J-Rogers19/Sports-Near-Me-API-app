@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Sports Near Me | Sport Events. Today.</title>
+	<link rel="stylesheet" href="index.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+
+	</script>
+</head>
+
+<body>
+	<div class="content">
+		<div class="landing" style="display: block;">
+			<header class="header">
+				<h1 class="headline center-text">
+					Sports Near Me
+				</h1>
+				<h3 class="tagline center-text">Sports events happening now</h3>
+			</header>
+			<form class="center-text location" id="query">
+				<input type="text" name="city-query" class="location city text-input box-shadow" id="city" placeholder="Enter a city">
+                <input type="text" name="state-query" class="location state text-input box-shadow" id="state" placeholder="Enter two letter state code">
+                <input type="submit" class="submit location box-shadow">
+            </form>
+            
+            <p id="js-error-message" class="error-message"></p>
+        <section id="results" class="hidden">
+          <h2>Search results</h2>
+          <ul id="results-list">
+          </ul>
+        </section>
+        </div>
+
+
+
+        <div class="loading-screen" style="display: none;"></div>
+        <header class="header">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </header>
+    </div>
+    
+
+    <div class="fail-screen" style="display: none;">
+        <header class="header">
+            <h1 class="tagline center-text loading">
+                Nothing to show...
+            </h1>
+            <div class="reload">
+                <h2 class="tagline center-text try-again">Try again tommorrow</h2>
+            </div>
+        </header>
+    </div>
+<script src="index.js"></script>
+</body>
+</html> 
