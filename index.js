@@ -53,8 +53,8 @@ function getSportsNearMeInfo(localCity, stateArr) {
     .then(response => {
       if (response.ok) {
         response.json().then(function (data) {
-          if (data.length===0) {
-             
+          if (data.length === 0) {
+            console.log('hello');
             nothingToShow();
 
           }
@@ -62,7 +62,7 @@ function getSportsNearMeInfo(localCity, stateArr) {
             displayResults(data._embedded.events)
           }
 
-          displayResults(data._embedded.events)
+          //displayResults(data._embedded.events)
         });
       }
     }).catch(err => {
@@ -72,7 +72,7 @@ function getSportsNearMeInfo(localCity, stateArr) {
 
     });
 }
-
+//When user enters value on date that nothing is showing//
 function nothingToShow() {
   console.log('failure');
   $('.fail-screen').show();
